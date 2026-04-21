@@ -1,0 +1,122 @@
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --nav-bg:#333333;
+    --nav-text: #ffffff;
+    --card: #f4f4f4;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #ffffff;
+    --nav-bg: #1e1e1e;
+    --nav-text: #ffffff;
+    --card: #2a2a2a;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    padding: 15px 40px;
+    gap: 20px; /* Adds space between the navbar options */
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    transition: background 0.3s ease;
+}
+
+.nav-left a {
+    color: var(--nav-text);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+
+}
+.nav-left a:hover {
+    opacity: 0.7;
+}
+
+/* Toggle Switch Styling */
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide default checkbox */
+
+#theme-switch {
+    display: none;
+}
+
+/* Toggle background */
+.toggle-label {
+    width: 50px;
+    height: 25px;
+    background: var(--card);
+    display: block;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Toggle ball*/
+.toggle-ball {
+    width: 21px;
+    height: 21px;
+    background: var(--text);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* When checked */
+#theme-switch:checked + .toggle-label .toggle-ball {
+    transform: translateX(25px);
+}
+
+.CenterAlign{
+    text-align: center;
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+
+    border-radius: 16px;
+}
+
+.button1{
+    border: 5px solid;
+    border-color: rgb(255, 255, 255);
+    text: white;
+}
+
+.page-content {
+  padding: 100px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 10px;
+}
